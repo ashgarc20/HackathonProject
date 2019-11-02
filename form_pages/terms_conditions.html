@@ -24,16 +24,22 @@ this application.</li>
 
 <br><br>
 
-<form action="/action_page.php">
+<form>
   <input type="checkbox" name="fees" value="yes" >I request to pay in lieu fees ($735/tree) in place of replanting <input type="number" name="quantity" min="1" max="99" >trees, in the amount of $<input type="number" name="quantity" min="1" max="999999" >.
+
  
 <br><br>
+
  
 <input type="checkbox" name="consent" value="yes" required>I have read and agree with the conditions of this application and hereby grant permission for City Personnel to inspect the trees on my
 property.
+</form>
 
 <br><br>
-<input type="submit" value="Submit">
+
+<form method=POST action='/result'>
+  <button type='submit'>Submit</button>
+</form>
     
     
     

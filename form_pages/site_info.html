@@ -2,7 +2,7 @@
 <html>
 <body>
 Please select the tree species:
-<form action="/action_page.php">
+<form>
   <select name="tree">
     <option value="select">Select the tree species </option>
     <option value="QA">Quercus agrifolia </option>
@@ -33,14 +33,10 @@ Number of Trees: <input type="number" name="quantity" min="1" max="99" required>
        <br><br>
     <input type="radio" name="gen" value="yes" > Yes<br>
   <input type="radio" name="gen" value="no">No<br>
- 
- 
-<form method=GET action='/result'>
-        <button type='submit'>Submit</button>
-    
 </form>
-
-
+  
+<form method=GET action='/form3'>
+  <button type='submit'>Next</button>
 </form>
 
 </body>
