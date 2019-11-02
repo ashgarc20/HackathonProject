@@ -14,7 +14,7 @@ def run_query(location, o_name, a_name, o_email, a_email, o_phone_num, a_phone_n
     
 class WelcomePageHandler(webapp2.RequestHandler):
     def get(self):
-        welcome_template = the_jinja_env.get_template('welcome_submit_pages/welcome.html')
+        welcome_template = the_jinja_env.get_template('design_pages/welcome.html')
         self.response.write(welcome_template.render())
         
 class PersonalContactHandler(webapp2.RequestHandler):
