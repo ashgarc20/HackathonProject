@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>Database</title>   
+     <link rel = "stylesheet" href = "background_database/viewable_database.css">
+    </head>
+    
+    <body>
+        <title>Database</title>
+        <div id="container">
+            {% for data in all_data %}
+            
+                <div>
+                    <h3>{{data.address}}</h3>
+                    <h3>{{data.owner_name}}</h3>
+                    <h3>{{data.applicant_name}}</h3>
+                    <h3>{{data.owner_email}}</h3>
+                    <h3>{{data.applicant_email}}</h3>
+                    <h3>{{data.owner_phone_num}}</h3>
+                    <h3>{{data.applicant_phone_num}}</h3>
+                    <h3>{{data.num_of_trees}}</h3>
+                    <h3>{{data.tree_type}}</h3>
+                    <h3>{{data.date_submitted}}</h3>
+                </div>
+                
+                <br> <br>
+                
+            {% endfor %}
+                
+        </div>
+    </body>
+</html>
