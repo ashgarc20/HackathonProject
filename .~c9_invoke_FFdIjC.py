@@ -32,11 +32,9 @@ class WelcomePageHandler(webapp2.RequestHandler):
         
 class FormHandler(webapp2.RequestHandler):
     def get(self):
-        myDict = {
-            'address_from_python_dict': '303 Saint Mathew Street Greenfield California'
-        }
-        personal_contact_template = the_jinja_env.get_template('personal_contact.html')
-        self.response.write(personal_contact_template.render(myDict))
+        mydict
+        personal_contact_template = the_jinja_env.get_template('form_pages/personal_contact.html')
+        self.response.write(personal_contact_template.render())
    
 class ViewApplicationHandler(webapp2.RequestHandler):
     def post(self):

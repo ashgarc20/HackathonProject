@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+     <!--Getting the Google Maps API script -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  
+
+   <!--Getting the jQuery script You will need to activate the API and get your own key from appengine.google.com -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
+   <!--This is our script -->
+   
+   <script>
+    var address = "{{ address_from_python_dict}}";
+    console.log("address: ",address);
+  </script>
+  
+  <script type="text/javascript" src="scripts/script.js"></script>
+   <!--And finally our script -->
+   
+   <link type="text/css" rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="personal_contact.css" type="text/css" />
+  
+   <title>Form Application</title>
+  </head>
+  
     <body>
-        <script src="personal_contact.js"></script>
         <form method=POST action='/result'>
          
           Owner's Name: <input type="text" name="ownname" required><br>
@@ -66,6 +88,18 @@
                  <br><br>
               <input type="radio" name="gen" value="yes" > Yes<br>
             <input type="radio" name="gen" value="no">No<br>
+            
+                        <!--google maps-->
+            
+            
+            <div id="general_container">
+                <br>
+                <div id="map-container">
+                  <div id="map-canvas">
+                </div>
+              </div>
+              </div>
+            
             <h2>The following conditions must be met prior to any tree removal or trimming:</h2>
 
           <ol>
