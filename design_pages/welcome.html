@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML>
     <head>
-        <link type="text/css" rel="stylesheet" href="welcome.css">
+        <link rel="stylesheet" type="text/css" href="welcome.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         
@@ -32,5 +32,87 @@
     <footer>
         <div class="needHelp"><a href="https://www.google.com/" id="needHelp2"> Need help?</a></div>
     </footer>
-
+    <style type='text/css'>
+        *{
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: green;
+    }
+    
+    .header {
+        overflow: hidden;
+        background-color: green;
+    }
+    .link {
+        float: right;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 30px 16px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .link:hover{
+        color: red;
+    }
+    .ul {
+        list-style-image: none;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    #centered {
+        position: absolute;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%, -50%)
+        
+    }
+    .text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .button {border-radius: 12px;}
+    .button {
+      background-color: white; /* Green */
+      border: none;
+      color: black;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border: 2px solid #555555;
+      
+    }
+    .button:hover {
+        background-color: #555555;
+        color: white;
+    }
+    .test {
+        color: black;
+    }
+    .needHelp {
+        text-align: center;
+    }
+    #needHelp2 {
+        text-decoration: none;
+        color: white;
+    }
+    </style>
 </HTML>
