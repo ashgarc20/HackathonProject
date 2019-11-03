@@ -41,7 +41,7 @@ class FormHandler(webapp2.RequestHandler):
 class ViewApplicationHandler(webapp2.RequestHandler):
     def post(self):
         
-        view_application_template = the_jinja_env.get_template('background_database/view_application.html')
+        view_application_template = the_jinja_env.get_template('view_application.html')
         
         address = self.request.get('address')
         owner_name = self.request.get('ownname')
@@ -75,7 +75,7 @@ class ViewApplicationHandler(webapp2.RequestHandler):
         
 class SubmitPageHandler(webapp2.RequestHandler):
     def get(self):
-        submit_template = the_jinja_env.get_template('design_pages/submit.html')
+        submit_template = the_jinja_env.get_template('submit.html')
         self.response.write(submit_template.render())
         
 class ViewableDatabase(webapp2.RequestHandler):
