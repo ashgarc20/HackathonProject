@@ -1,9 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
 
 #general_container {
-  width: 1400px;
-  height: 1000px;
+  width: 700px;
+  height: 475px;
   margin: auto;
+  position: right;
 }
 
 
@@ -20,7 +21,6 @@
     vertical-align: top;
 }
 
-
 /*
 The following determine how the map will look !important!
 */
@@ -34,7 +34,7 @@ The following determine how the map will look !important!
 #map-container {
   position: static;
   width: 80%;
-  height: 600px;
+  height: 525px;
   padding: 30px;
   float: none;
   margin: auto;
