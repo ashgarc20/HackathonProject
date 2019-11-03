@@ -80,7 +80,7 @@ class SubmitPageHandler(webapp2.RequestHandler):
         
 class ViewableDatabase(webapp2.RequestHandler):
     def get(self):
-        all_data_template = the_jinja_env.get_template('background_database/viewable_database.html')
+        all_data_template = the_jinja_env.get_template('viewable_database.html')
      
         all_data = Tree_Application.query().fetch()
         

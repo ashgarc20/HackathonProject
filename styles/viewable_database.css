@@ -1,0 +1,35 @@
+#container {
+   display: flex;
+   width: 100%;
+   margin: auto auto;
+   flex-wrap: nowrap;
+   flex-direction: row;
+   justify-content: space-evenly;
+   font-family: 'Open Sans', sans-serif;
+  
+}
+
+.title {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.box {
+     border-style: solid;
+     padding-left: 30px;
+     padding-right: 30px;
+     width: 33%;
+     margin: 5px;
+    text-align: center;
+     
+}
+
+.section {
+    border-bottom-style: solid;
+}
+
+
+
+
+
