@@ -49,8 +49,25 @@ footer {
     position: absolute;
     text-align: center;
     top: 60%;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
     background-color: lightgray;
     padding: 30px 30px 30px 30px;
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+#general_container {
+    
+        position: absolute;
+    
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
 }
