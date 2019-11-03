@@ -1,6 +1,9 @@
 import webapp2
 import jinja2
 import os
+import logging
+import time
+from google.appengine.ext import ndb
 from models import Tree_Application
 from webapp2_extras import sessions
 
@@ -8,6 +11,15 @@ the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+    
+class CoordsRequest(ndb.Model):
+    lat = ndb.StringProperty(required = True)
+    lon = ndb.StringProperty(required = True)
+    timestamp = ndb.DateTimeProperty(auto_now_add = True)
+
+class AddressRequest(ndb.Model):
+    address = ndb.StringProperty(required = True)
+    timestamp = ndb.DateTimeProperty(auto_now_add = True)
     
 def run_query(location, o_name, a_name, o_email, a_email, o_phone_num, a_phone_num, tree_number, tree_species, date):
     user_info = Tree_Application(address = location, owner_name = o_name, applicant_name = a_name, owner_email = o_email, applicant_email = a_email, owner_phone_num = o_phone_num, applicant_phone_num = a_phone_num, num_of_trees = tree_number, tree_type = tree_species, date_submitted = date)
@@ -50,9 +62,13 @@ class SiteInfoHandler(BaseHandler):
         self.session['ownphone'] = self.request.get('ownphone')
         self.session['appliphone'] = self.request.get('appliphone')
         self.session['submission'] = self.request.get('submission')
+        
+        myDict = {
+            'address_from_python_dict': '277 River Road'
+        }
 
         site_info_template = the_jinja_env.get_template('form_pages/site_info.html')
-        self.response.write(site_info_template.render())
+        self.response.write(site_info_template.render(myDict))
         
 class TermsAndConditionsHandler(BaseHandler):
     def get(self):
